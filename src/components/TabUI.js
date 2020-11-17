@@ -4,7 +4,7 @@ import {List, PersonCircle} from 'react-bootstrap-icons';
 import {Link} from 'react-router-dom'
 
 
-export default function Header({ navigation }) {
+export default function Tabs({ navigation }) {
   return (
     <Container className="">
       <Row className="py-3">

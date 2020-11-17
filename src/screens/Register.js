@@ -1,5 +1,6 @@
 import React from 'react';
 import {Container, Form, Row, Col, Button} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 const userName = "CheckIn";
 const pass = "CheckIn1";
@@ -7,7 +8,7 @@ const pass = "CheckIn1";
 
 export default function Register({ navigation }) {
   return (
-    <Container className="my-auto">
+    <Container className="">
       <Row>
         <Col>
           Sign Up
@@ -34,6 +35,7 @@ export default function Register({ navigation }) {
               <Form.Control type="password" class="text-center" placeholder="Password" id="exampleInputPassword1"/>
             </Form.Group>
             <Button type="submit" class="btn btn-danger mx-auto">Sign Up</Button>
+            <Link to="/"><Button class="btn btn-danger mx-auto">Already Have Account?</Button></Link>
           </Form>
         </Col>
       </Row>

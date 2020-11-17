@@ -15,24 +15,63 @@ import Reserve from './screens/Reserve.js';
 import CheckIn from './screens/CheckIn.js';
 import Settings from './screens/Settings.js';
 import Header from './components/Header.js';
+import TabBar from './components/TabUI.js';
 
 function App() {
-  const [isSignedIn, signIn] = useState(false);
+  const [isSignedIn, signIn] = useState(true);
 
 
   return (
     <Router>
       <div className="py-4" style={{width: "100%", height: "100vh"}}>
-        <div className="mx-auto" style={{maxWidth: "375px", height: "100%", border: "1px solid black"}}>
-          <Container fluid>
-            {/* <Header /> */}
-          </Container>
+        <div className="mx-auto" style={{maxWidth: "375px", height: "100%", border: "1px solid black", overflowY: "scroll"}}>
+          {isSignedIn ?
+            <Container fluid>
+              <Header />
+            </Container> :
+            ""
+          }
           <Container className="h-100 d-flex">
             {isSignedIn ?
-              <Home/> :
-              <Login />
+              <Switch>
+                <Route path="/settings">
+                  <Settings />
+                </Route>
+                <Route path="/search">
+                  <Search />
+                </Route>
+                <Route path="/reserve">
+                  <Reserve />
+                </Route>
+                <Route path="/checkin">
+                  <CheckIn />
+                </Route>
+                <Route path="/locations">
+                  <Locations />
+                </Route>
+                <Route path="/register">
+                  <Register />
+                </Route>
+                <Route exact path="/">
+                  <Home />
+                </Route>
+              </Switch> :
+              <Switch>
+                <Route path="/register">
+                  <Register />
+                </Route>
+                <Route path="/">
+                  <Login />
+                </Route>
+              </Switch>
             }
           </Container>
+          {isSignedIn ?
+            <Container fluid>
+              <TabBar />
+            </Container> :
+            ""
+          }
         </div>
       </div>
     </Router>

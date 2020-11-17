@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/check-in-app/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/check-in-app/static/js/main.2c79bff1.chunk.js",
+    "main.js.map": "/check-in-app/static/js/main.2c79bff1.chunk.js.map",
+    "runtime-main.js": "/check-in-app/static/js/runtime-main.cf036b21.js",
+    "runtime-main.js.map": "/check-in-app/static/js/runtime-main.cf036b21.js.map",
+    "static/css/2.109aacae.chunk.css": "/check-in-app/static/css/2.109aacae.chunk.css",
+    "static/js/2.06b21752.chunk.js": "/check-in-app/static/js/2.06b21752.chunk.js",
+    "static/js/2.06b21752.chunk.js.map": "/check-in-app/static/js/2.06b21752.chunk.js.map",
+    "static/js/3.96c0b086.chunk.js": "/check-in-app/static/js/3.96c0b086.chunk.js",
+    "static/js/3.96c0b086.chunk.js.map": "/check-in-app/static/js/3.96c0b086.chunk.js.map",
+    "index.html": "/check-in-app/index.html",
+    "static/css/2.109aacae.chunk.css.map": "/check-in-app/static/css/2.109aacae.chunk.css.map",
+    "static/css/main.6dea0f05.chunk.css.map": "/check-in-app/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.06b21752.chunk.js.LICENSE.txt": "/check-in-app/static/js/2.06b21752.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cf036b21.js",
+    "static/css/2.109aacae.chunk.css",
+    "static/js/2.06b21752.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.2c79bff1.chunk.js"
+  ]
+}

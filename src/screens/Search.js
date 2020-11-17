@@ -4,7 +4,7 @@ import {Container, Row, Col, Form, Button} from 'react-bootstrap';
 
 export default function Home({ navigation }) {
   return (
-    <Container className="my-auto">
+    <Container className="">
       <Row>
         <Col>
           Search
