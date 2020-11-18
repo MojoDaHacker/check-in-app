@@ -1,0 +1,11 @@
+.app {
+    
+    margin: .25em;
+    height: 150px;
+    border-radius: 15px;
+}
+
+.heading {
+    font-size: 2em;
+    margin: 1em;
+}
