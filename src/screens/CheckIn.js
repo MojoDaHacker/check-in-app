@@ -7,11 +7,7 @@ export default function CheckIn() {
     <Container>
       <Row>
         <Col>
-<<<<<<< HEAD
-          <h3 class="heading">Check In</h3>
-=======
           <h3>Check In</h3>
->>>>>>> c506f3cfb14627fba39ba0311ea066ed89cb81ab
         </Col>
       </Row>
       <Row fluid>
