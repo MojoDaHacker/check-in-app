@@ -16,6 +16,7 @@ import CheckIn from './screens/CheckIn.js';
 import Settings from './screens/Settings.js';
 import Header from './components/Header.js';
 import TabBar from './components/TabUI.js';
+import './assets/stylesheet.css'
 
 function App() {
   const [isSignedIn, signIn] = useState(true);

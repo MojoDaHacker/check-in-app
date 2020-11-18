@@ -1,11 +1,13 @@
-.app {
-    
-    margin: .25em;
-    height: 150px;
-    border-radius: 15px;
+.heading {
+    text-align: center;
+    margin: 1em;
+    font-weight: 600;
+    color: #0D2363;
 }
 
-.heading {
-    font-size: 2em;
-    margin: 1em;
-}
+/* .clickable { */
+   /* padding: 1em; */
+    /* margin: .25em; */
+/* } */
+
+.div.row

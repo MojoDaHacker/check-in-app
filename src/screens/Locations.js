@@ -7,7 +7,8 @@ export default function Home({ navigation }) {
     <Container className="">
       <Row>
         <Col>
-          Nearby Locations
+        <h3 class="heading">Nearby Locations</h3>
+          
         </Col>
       </Row>
       <Container class="mt-3" fluid>

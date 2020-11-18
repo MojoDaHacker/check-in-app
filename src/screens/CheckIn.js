@@ -7,7 +7,7 @@ export default function Home({ navigation }) {
     <Container className="">
       <Row>
         <Col>
-          Check In
+          <h3 class="heading">Check In</h3>
         </Col>
       </Row>
       <Container class="p-5" fluid>

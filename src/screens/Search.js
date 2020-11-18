@@ -7,7 +7,7 @@ export default function Home({ navigation }) {
     <Container className="">
       <Row>
         <Col>
-          Search
+          <h3 class="heading">Search</h3>
         </Col>
       </Row>
       <Container fluid>
