@@ -2,64 +2,36 @@ import React from 'react';
 import {Container, Row, Col, Button} from 'react-bootstrap';
 
 
-export default function Home({ navigation }) {
+export default function CheckIn() {
   return (
-    <Container className="">
+    <Container>
       <Row>
         <Col>
+<<<<<<< HEAD
           <h3 class="heading">Check In</h3>
+=======
+          <h3>Check In</h3>
+>>>>>>> c506f3cfb14627fba39ba0311ea066ed89cb81ab
         </Col>
       </Row>
-      <Container class="p-5" fluid>
-        <div class="card my-2 container-fluid">
-          <div class="row mb-2">
-            <div class="col">
-              <div class="float-left">Today</div>
-            </div>
-            <div class="col">
-              <div class="float-right"> 12:00 AM</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
+      <Row fluid>
+        <Button className="text-left my-2 w-100">
+          <Row className=" mb-2">
+            <Col>
+              <div className="float-left">Today</div>
+            </Col>
+            <Col>
+              <div className="float-right"> 12:00 AM</div>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
               <h2>Restaurants</h2>
               <p>Address</p>
-            </div>
-          </div>
-        </div>
-        <div class="card my-2 container-fluid">
-          <div class="row mb-2">
-            <div class="col">
-              <div class="float-left">Saturday</div>
-            </div>
-            <div class="col">
-              <div class="float-right"> 4:00 PM</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <h2>Open House</h2>
-              <p>Address</p>
-            </div>
-          </div>
-        </div>
-        <div class="card my-2 container-fluid">
-        <div class="row mb-2">
-          <div class="col">
-            <div class="float-left">Monday</div>
-          </div>
-          <div class="col">
-            <div class="float-right"> 10:00 AM</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <h2>Meeting</h2>
-            <p>Address</p>
-          </div>
-        </div>
-      </div>
-      </Container>
+            </Col>
+          </Row>
+        </Button>
+      </Row>
     </Container>
   );
 }

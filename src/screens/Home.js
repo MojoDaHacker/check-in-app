@@ -6,12 +6,12 @@ import {Link} from 'react-router-dom';
 export default function Home({ navigation }) {
   return (
     <Container className="">
-      <Row>
+      <Row className="my-2">
         <Col>
           <h3 class="heading">Welcome, User</h3>
         </Col>
       </Row>
-      <Row>
+      <Row className="my-2">
         <Col className="">
           <Link to="/locations">
             <Button class="">
