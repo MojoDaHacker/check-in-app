@@ -1,103 +1,36 @@
 import React from 'react';
 import {Container, Row, Col, Button} from 'react-bootstrap';
+import {Link} from 'react-router-dom'
 
 
-export default function Home({ navigation }) {
+export default function Locations({ navigation }) {
   return (
-    <Container className="">
+    <Container>
       <Row>
         <Col>
-          Nearby Locations
+          <h3>Nearby Locations</h3>
         </Col>
       </Row>
-      <Container class="mt-3" fluid>
-        <Row>
-          <div class="card my-2 container-fluid">
-            <div class="row">
-              <div class="col">
-                <div class="float-left">Rating</div>
-              </div>
-              <div class="col">
-                <div class="float-right">Current Capacity</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <h2>Restaurants</h2>
-                <p>Address</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <p class="text-right w-100">More Details</p>
-              </div>
-            </div>
-          </div>
-          <div class="card my-2 container-fluid">
-            <div class="row">
-              <div class="col">
-                <div class="float-left">Rating</div>
-              </div>
-              <div class="col">
-                <div class="float-right">Current Capacity</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <h2>Open House</h2>
-                <p>Address</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <p class="text-right w-100">More Details</p>
-              </div>
-            </div>
-          </div>
-          <div class="card my-2 container-fluid">
-            <div class="row">
-              <div class="col">
-                <div class="float-left">Rating</div>
-              </div>
-              <div class="col">
-                <div class="float-right">Current Capacity</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <h2>Store</h2>
-                <p>Address</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <p class="text-right w-100">More Details</p>
-              </div>
-            </div>
-          </div>
-          <div class="card my-2 container-fluid">
-            <div class="row">
-              <div class="col">
-                <div class="float-left">Rating</div>
-              </div>
-              <div class="col">
-                <div class="float-right">Current Capacity</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <h2>Nail Salon</h2>
-                <p>Address</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <p class="text-right w-100">More Details</p>
-              </div>
-            </div>
-          </div>
-        </Row>
-      </Container>
+      <Row class="mt-3" fluid>
+        <Col>
+          <Link to="/reserve">
+            <Button className="w-100 p-1">
+            <Container fluid>
+              <Row>
+                  <div className="mr-auto">Rating</div>
+                  <div>Current Capacity</div>
+              </Row>
+              <Row>
+                <Col className="p-0 text-left">
+                  <div><h2>Open House</h2></div>
+                  <div><p>Address</p></div>
+                </Col>
+              </Row>
+            </Container>
+          </Button>
+          </Link>
+        </Col>
+      </Row>
     </Container>
   );
 }

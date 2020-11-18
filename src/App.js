@@ -1,9 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 import React, {useState} from 'react';
 import {BrowserRouter as Router,
   Switch,
   Route,
   Link,
+  useHistory
 } from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap';
 import Login from './screens/Login.js';
@@ -19,7 +21,8 @@ import TabBar from './components/TabUI.js';
 
 function App() {
   const [isSignedIn, signIn] = useState(true);
-
+  const history = useHistory();
+  console.log(history)
 
   return (
     <Router>
@@ -34,7 +37,7 @@ function App() {
             ""
           } */}
           <Row className="h-100" style={{overflowY: "scroll"}}>
-            <Container className="d-flex">
+            <Container className="d-flex pt-3">
               {isSignedIn ?
                 <Switch>
                   <Route path="/settings">
