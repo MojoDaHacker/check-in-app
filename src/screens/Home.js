@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, Row, Col, Button} from 'react-bootstrap';
-import "../assets/stylesheet.css";
+import {Link} from 'react-router-dom';
 
 
 export default function Home({ navigation }) {
@@ -11,25 +11,37 @@ export default function Home({ navigation }) {
           Welcome, User
         </Col>
       </Row>
-      <Row class="p-5">
-
-            <div class="app btn btn-primary">
-              <h3>Nearby Locations</h3>
-            </div>
-            <div class="app btn btn-primary">
-              <h3>Need to Check In?</h3>
-            </div>
-
-          
-
-            <div class="app btn btn-primary">
-              <h3>Search</h3>
-            </div>
-            <div class="app btn btn-primary">
-              <h3>Settings</h3>
-            </div>
-
-
+      <Row>
+        <Col className="">
+          <Link to="/locations">
+            <Button class="w-100 h-100 card text-center p-3">
+              <p>Nearby Locations</p>
+            </Button>
+          </Link>
+        </Col>
+        <Col className="w-100">
+          <Link to="/checkin">
+            <Button class=" w-100 h-100 card text-center p-3">
+              <p>Check In?</p>
+            </Button>
+          </Link>
+        </Col>
+      </Row>
+      <Row>
+        <Col className="w-100">
+          <Link to="/search">
+            <Button class="w-100 h-100 card text-center p-3">
+              <p>Search</p>
+            </Button>
+          </Link>
+        </Col>
+        <Col className="w-100">
+          <Link to="/settings">
+            <Button class="w-100 h-100 card text-center p-3">
+              <p>Settings</p>
+            </Button>
+          </Link>
+        </Col>
       </Row>
     </Container>
   );

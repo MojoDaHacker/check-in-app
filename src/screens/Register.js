@@ -8,7 +8,7 @@ const pass = "CheckIn1";
 
 export default function Register({ navigation }) {
   return (
-    <Container className="">
+    <Container className="my-auto">
       <Row>
         <Col>
           Sign Up
