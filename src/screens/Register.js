@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react';
 import {Container, Form, Row, Col, Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import StoreContext from "../contexts/store.js";
+import CheckIn from '../assets/CheckIn_Logo_Text.png'
 
 
 export default function Register({signIn}) {
@@ -37,6 +38,9 @@ export default function Register({signIn}) {
           Sign Up
         </Col>
       </Row> */}
+      <div> 
+        <img src={CheckIn} width="100%" height="100%"/>
+      </div>
       <Row>
         <Col>
           <Form onSubmit={handleSubmission} validated={registrationValidated}>

@@ -1,11 +1,15 @@
 import React from 'react';
 import {Container, Row, Col, Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import CheckIn from '../assets/CheckIn_Logo_Text.png'
 
 
 export default function Home({ navigation }) {
   return (
     <Container className="">
+        <div> 
+          <img src={CheckIn} width="100%" height="100%"/>
+        </div>
       <Row className="my-2">
         <Col>
           <h3 class="heading">Welcome, User</h3>
