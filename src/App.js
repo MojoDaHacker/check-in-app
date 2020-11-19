@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useState} from 'react';
-import {BrowserRouter as Router,
+import {HashRouter as Router,
   Switch,
   Route,
   useHistory
@@ -17,6 +17,7 @@ import Settings from './screens/Settings.js';
 // import Header from './components/Header.js';
 import TabBar from './components/TabUI.js';
 import StoreContext from "./contexts/store.js";
+import TestJSON from "./testData.json";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const defaultUser = {
@@ -24,12 +25,13 @@ const defaultUser = {
   pwd : "support",
 }
 
-
 const initialUsers = [defaultUser];
+const initialEvents = TestJSON;
 
 function App() {
   const [isSignedIn, signIn] = useState(false);
   const [users, setUsers] = useState(initialUsers);
+  const [events, setEvents] = useState(initialEvents);
 
   const history = useHistory();
   console.log(history)
@@ -42,12 +44,32 @@ function App() {
     copy.splice(index, 1);
     setUsers(copy);
   }
+  const addEvent = event => {
+    setEvents([...events, event])
+  }
+  const delEvent = (index) => {
+    const copy = [...events];
+    copy.splice(index, 1);
+    setEvents(copy);
+  }
+
+  var userKit = {
+    users,
+    addUser: addUser,
+    delUser: delUser
+  }
+  var eventKit = {
+    events,
+    reservedEvents: [],
+    addEvent: addEvent,
+    delEvent: delEvent
+  }
+
 
   return (
-    <Router>
-      <StoreContext.Provider value={{users, addUser: addUser, delUser: delUser}}>
+    <Router basename="/">
+      <StoreContext.Provider value={{eventKit, userKit}}>
         <div className="py-4" style={{width: "100%", height: "100vh"}}>
-          {/* <AppContext.Consumer> */}
             <Container className="mx-auto d-flex flex-column" style={{maxWidth: "375px", height: "100%", border: "1px solid black"}}>
           <Row className="h-100" style={{overflowY: "scroll"}}>
             <Container className="h-100 pt-3">
@@ -92,7 +114,6 @@ function App() {
             ""
           }
         </Container>
-          {/* </AppContext.Consumer> */}
         </div>
       </StoreContext.Provider>
     </Router>

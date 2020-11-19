@@ -1,6 +1,38 @@
-
-
 [
-  {}
+  {
+    "rating": 4,
+    "venue": "Barbershop",
+    "curCapacity": 24,
+    "maxCapacity": 50,
+    "address": "3612 Bahama Dr"
+  },
+  {
+    "rating": 2,
+    "venue": "Sicily's Pizza",
+    "curCapacity": 12,
+    "maxCapacity": 35,
+    "address": "4567 Pahmonia Dr"
+  },
+  {
+    "rating": 3,
+    "venue": "Tony's Gym",
+    "curCapacity": 40,
+    "maxCapacity": 50,
+    "address": "2984 Spartan Ring Ave"
+  },
+  {
+    "rating": 5,
+    "venue": "History Museum",
+    "curCapacity": 45,
+    "maxCapacity": 50,
+    "address": "5942 Cosar Lipo Ave"
+  },
+  {
+    "rating": 5,
+    "venue": "Local Zoo",
+    "curCapacity": 35,
+    "maxCapacity": 50,
+    "address": "10938 Zooyork St"
+  }
 ]
 

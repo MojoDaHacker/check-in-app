@@ -2,7 +2,16 @@ import React from 'react';
 import {Container, Row, Col, Button, Form} from 'react-bootstrap';
 
 
-export default function Reserve({ navigation }) {
+
+
+export default function Reserve(props) {
+  const event = props.reserve;
+
+  const reserveEvent = e => {
+    e.preventDefault()
+    console.log(props)
+  }
+
   return (
     <Container>
       <Row>
@@ -21,7 +30,7 @@ export default function Reserve({ navigation }) {
         </Col>
       </Row>
       <Row className="mt-3">
-        <Form>
+        <Form onSubmit={reserveEvent}>
           <Form.Group>
             <label for="exampleInputName1">Name</label>
             <Form.Control type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
@@ -34,7 +43,7 @@ export default function Reserve({ navigation }) {
             <label for="exampleInputPassword1">Phone Number</label>
             <Form.Control type="text" className="form-control" id="exampleInputPassword1"/>
           </Form.Group>
-          <button type="submit" className="btn btn-primary">Submit Reservation</button>
+          <Button type="submit" className="btn btn-primary">Submit Reservation</Button>
         </Form>
       </Row>
     </Container>
