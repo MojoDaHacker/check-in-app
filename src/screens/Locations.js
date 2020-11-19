@@ -8,10 +8,6 @@ export default function Locations({ navigation }) {
     <Container>
       <Row>
         <Col>
-<<<<<<< HEAD
-        <h3 class="heading">Nearby Locations</h3>
-          
-=======
           <h3>Nearby Locations</h3>
         </Col>
       </Row>
@@ -33,7 +29,6 @@ export default function Locations({ navigation }) {
             </Container>
           </Button>
           </Link>
->>>>>>> c506f3cfb14627fba39ba0311ea066ed89cb81ab
         </Col>
       </Row>
     </Container>

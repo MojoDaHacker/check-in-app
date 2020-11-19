@@ -8,11 +8,7 @@ export default function Search({ navigation }) {
     <Container className="">
       <Row>
         <Col>
-<<<<<<< HEAD
-          <h3 class="heading">Search</h3>
-=======
           <h3>Search</h3>
->>>>>>> c506f3cfb14627fba39ba0311ea066ed89cb81ab
         </Col>
       </Row>
       <Container fluid>
