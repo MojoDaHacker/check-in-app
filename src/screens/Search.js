@@ -1,9 +1,9 @@
 import React from 'react';
-import {Container, Row, Col, Form, Button, Card} from 'react-bootstrap';
+import {Container, Row, Col, Form, Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom'
 
 
-export default function Search({ navigation }) {
+export default function Search() {
   return (
     <Container className="">
       <Row>
@@ -43,24 +43,5 @@ export default function Search({ navigation }) {
         </Row>
       </Container>
     </Container>
-    );
-  }
-  
-  {/* <div className="card my-2 container-fluid">
-    <Row>
-      <Col>
-        <div className="float-left">Rating</div>
-      </Col>
-      <Col>
-        <div className="float-right">Current Capacity</div>
-      </Col>
-    </Row>
-    <Row>
-      <h2>Store</h2>
-      <p>Address</p>
-    </Row>
-    <Row>
-      <p className="text-right w-100">More Details</p>
-    </Row>
-  </div>
-  <div className="card my-2 container-fluid"> */}
+  );
+}
