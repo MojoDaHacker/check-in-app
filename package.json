@@ -1,6 +1,6 @@
 {
   "name": "check-in-app",
-  "homepage": "https://mojodahacker.github.io/check-in-app/",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -10,6 +10,7 @@ export default function Login({signIn}) {
   const [isUserAuthorized, authorizeUser] = useState(null);
   const [userName, changeName] = useState("");
   const [passWord, changePass] = useState("");
+  const users = storeContext.userKit.users;
   
   const handleSubmission = (e) => {
     e.preventDefault();
@@ -27,7 +28,7 @@ export default function Login({signIn}) {
     }
   }
   const handleAuthorization = props => { 
-    for (const obj of storeContext.users){
+    for (const obj of users){
       if(obj.user === userName){
         if (obj.pwd === passWord) {
           return 1
