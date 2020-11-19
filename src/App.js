@@ -16,9 +16,6 @@ import CheckIn from './screens/CheckIn.js';
 import Settings from './screens/Settings.js';
 // import Header from './components/Header.js';
 import TabBar from './components/TabUI.js';
-<<<<<<< HEAD
-import './assets/stylesheet.css'
-=======
 import StoreContext from "./contexts/store.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -29,7 +26,6 @@ const defaultUser = {
 
 
 const initialUsers = [defaultUser];
->>>>>>> 94db0a832b95f89ed2d2f60ee82a19e1ef083a18
 
 function App() {
   const [isSignedIn, signIn] = useState(false);
