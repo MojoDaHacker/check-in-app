@@ -11,7 +11,7 @@ export default function Locations({ navigation }) {
           <h3>Nearby Locations</h3>
         </Col>
       </Row>
-      <Row class="mt-3" fluid>
+      <Row className="mt-3" fluid>
         <Col>
           <Link to="/reserve">
             <Button className="w-100 p-1">
