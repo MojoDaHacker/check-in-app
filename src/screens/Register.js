@@ -12,6 +12,7 @@ export default function Register({signIn}) {
   const [password, changePass] = useState("");
   const [email, changeEmail] = useState("");
 
+  const userKit = storeContext.userKit;
   
   const handleSubmission = (e) => {
     e.preventDefault();
@@ -22,6 +23,8 @@ export default function Register({signIn}) {
       console.log(false)
       return 0
     }
+    userKit.addUser({user: username, pwd: password})
+    
 
     validate(true)
     setTimeout(() => {
@@ -31,6 +34,8 @@ export default function Register({signIn}) {
     return 1
   }
 
+  console.log(userKit)
+
   return (
     <Container className="my-auto">
       {/* <Row>
@@ -39,13 +44,13 @@ export default function Register({signIn}) {
         </Col>
       </Row> */}
       <div> 
-        <img src={CheckIn} width="100%" height="100%"/>
+        <img src={CheckIn} width="100%" height="100%" alt="Check In Logo"/>
       </div>
       <Row>
         <Col>
           <Form onSubmit={handleSubmission} validated={registrationValidated}>
             <Form.Group>
-              <Form.Control isInvalid={registrationValidated === false} type="text" className="text-center"  aria-describedby="emailHelp" placeholder="Name"/>
+              <Form.Control onChange={e => changeName(e.target.value)} isInvalid={registrationValidated === false} type="text" className="text-center"  aria-describedby="emailHelp" placeholder="Name"/>
             </Form.Group>
             <Form.Group>
               <Form.Control isInvalid={registrationValidated === false} type="email" className="text-center" placeholder="Email" aria-describedby="emailHelp"/>
@@ -56,7 +61,7 @@ export default function Register({signIn}) {
               <Form.Control isInvalid={registrationValidated === false} type="password" className="text-center" placeholder="Date of Birth"/>
             </Form.Group>
             <Form.Group>
-              <Form.Control isInvalid={registrationValidated === false} type="password" className="text-center" placeholder="Password"/>
+              <Form.Control onChange={e => changePass(e.target.value)} isInvalid={registrationValidated === false} type="password" className="text-center" placeholder="Password"/>
             </Form.Group>
             <Form.Row>
               <div className="w-100 text-center mb-3">

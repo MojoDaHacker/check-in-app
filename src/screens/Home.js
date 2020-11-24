@@ -12,21 +12,21 @@ export default function Home({ navigation }) {
         </div>
       <Row className="my-2">
         <Col>
-          <h3 class="heading">Welcome, User</h3>
+          <h3 className="heading">Welcome, User</h3>
         </Col>
       </Row>
       <Row className="my-2">
         <Col className="">
           <Link to="/locations">
-            <Button class="">
-              <p class="clickable">Nearby</p>
+            <Button className="">
+              <p className="clickable">Nearby</p>
             </Button>
           </Link>
         </Col>
         <Col className="">
           <Link to="/checkin">
-            <Button class="">
-              <p class="clickable">Check In?</p>
+            <Button className="">
+              <p className="clickable">Check In?</p>
             </Button>
           </Link>
         </Col>
@@ -34,15 +34,15 @@ export default function Home({ navigation }) {
       <Row>
         <Col className="">
           <Link to="/search">
-            <Button class="">
-              <p class="clickable">Search</p>
+            <Button className="">
+              <p className="clickable">Search</p>
             </Button>
           </Link>
         </Col>
         <Col className="">
           <Link to="/settings">
-            <Button class="">
-              <p class="clickable">Settings</p>
+            <Button className="">
+              <p className="clickable">Settings</p>
             </Button>
           </Link>
         </Col>

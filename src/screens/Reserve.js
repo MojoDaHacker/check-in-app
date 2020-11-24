@@ -1,15 +1,23 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Container, Row, Col, Button, Form} from 'react-bootstrap';
+import {useParams} from 'react-router-dom';
+import StoreContext from "../contexts/store.js";
 
 
 
 
 export default function Reserve(props) {
-  const event = props.reserve;
+  const storeContext = useContext(StoreContext);
+  const eventStore = storeContext.eventKit 
+  const {id} = useParams();
 
   const reserveEvent = e => {
     e.preventDefault()
-    console.log(props)
+
+    eventStore.addEvent(eventStore.events[id])
+
+    console.log(eventStore.reservedEvents)
+    
   }
 
   return (
@@ -32,15 +40,15 @@ export default function Reserve(props) {
       <Row className="mt-3">
         <Form onSubmit={reserveEvent}>
           <Form.Group>
-            <label for="exampleInputName1">Name</label>
+            <Form.Label htmlFor="exampleInputName1">Name</Form.Label>
             <Form.Control type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
           </Form.Group>
           <Form.Group>
-            <label for="exampleInputEmail1">Email address</label>
+            <Form.Label htmlFor="exampleInputEmail1">Email address</Form.Label>
             <Form.Control type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
           </Form.Group>
           <Form.Group>
-            <label for="exampleInputPassword1">Phone Number</label>
+            <Form.Label htmlFor="exampleInputPassword1">Phone Number</Form.Label>
             <Form.Control type="text" className="form-control" id="exampleInputPassword1"/>
           </Form.Group>
           <Button type="submit" className="btn btn-primary">Submit Reservation</Button>

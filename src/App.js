@@ -18,6 +18,7 @@ import Settings from './screens/Settings.js';
 import TabBar from './components/TabUI.js';
 import StoreContext from "./contexts/store.js";
 import TestJSON from "./testData.json";
+import './assets/stylesheet.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const defaultUser = {
@@ -32,9 +33,9 @@ function App() {
   const [isSignedIn, signIn] = useState(false);
   const [users, setUsers] = useState(initialUsers);
   const [events, setEvents] = useState(initialEvents);
+  const [reservedEvents, reserveEvent] = useState([]);
 
   const history = useHistory();
-  console.log(history)
 
   const addUser = user => {
     setUsers([...users, user])
@@ -45,7 +46,7 @@ function App() {
     setUsers(copy);
   }
   const addEvent = event => {
-    setEvents([...events, event])
+    reserveEvent([...reservedEvents, event])
   }
   const delEvent = (index) => {
     const copy = [...events];
@@ -60,7 +61,7 @@ function App() {
   }
   var eventKit = {
     events,
-    reservedEvents: [],
+    reservedEvents,
     addEvent: addEvent,
     delEvent: delEvent
   }
@@ -81,7 +82,7 @@ function App() {
                   <Route path="/search">
                     <Search />
                   </Route>
-                  <Route path="/reserve">
+                  <Route path="/reserve/:id">
                     <Reserve />
                   </Route>
                   <Route path="/checkin">

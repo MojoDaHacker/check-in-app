@@ -10,7 +10,7 @@ export default function Settings({ navigation }) {
           <h3>Settings</h3>
         </Col>
       </Row>
-      <Row class="p-0" fluid>
+      <Row className="p-0" fluid>
         <Jumbotron className="w-100 p-3">
           <h3>Account</h3>
           <ListGroup>
