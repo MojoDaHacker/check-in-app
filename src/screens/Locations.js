@@ -19,26 +19,10 @@ export default function Locations() {
       </Row>
       <Row className="mt-3" fluid>
         <Col className="text-primay">
-          <Link to="/reserve/20">
-            <Button className="mb-3 w-100 p-1 border-0" id="eventPic02">
-              <Container fluid>
-                <Row>
-                    <div className="mr-auto">Rating</div>
-                    <div>Current Capacity</div>
-                </Row>
-                <Row>
-                  <Col className="p-0 text-left">
-                    <div><h2>Open House</h2></div>
-                    <div><p>Address</p></div>
-                  </Col>
-                </Row>
-              </Container>
-            </Button>
-          </Link>
           {eventStore.events.map((val, i) => (
             <Link to={`/reserve/${i}`} key={i}>
               <Button className="mb-3 w-100 p-1 border-0" id={`eventPic0${i + 3}`}>
-                <Container fluid>
+                <Container className="" fluid>
                   <Row>
                     <div className="mr-auto">{`Rating: ${val.rating} / 5`}</div>
                     <div>{`Capacity ${val.curCapacity} / ${val.maxCapacity}`}</div>

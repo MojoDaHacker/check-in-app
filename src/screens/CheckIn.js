@@ -31,40 +31,28 @@ export default function CheckIn() {
             <Button variant="secondary" onClick={handleClose}>Close</Button>
           </Modal.Footer>
         </Modal>
-        <Button className="text-left my-2 w-100" onClick={handleShow}>
-          <Row className=" mb-2">
-            <Col>
-              <div className="float-left">Today</div>
-            </Col>
-            <Col>
-              <div className="float-right"> 12:00 AM</div>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <h2>Restaurants</h2>
-              <p>Address</p>
-            </Col>
-          </Row>
-        </Button>
-        {eventStore.reservedEvents.map((val, i) => (
-          <Button key={i} className="text-left my-2 w-100">
-            <Row className=" mb-2">
-              <Col>
-                <div className="float-left">{val.capactiy}</div>
-              </Col>
-              <Col>
-                <div className="float-right"> 12:00 AM</div>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <h2>{val.venue}</h2>
-                <p>{val.address}</p>
-              </Col>
-            </Row>
-          </Button>
-        ))}
+        {
+          eventStore.reservedEvents.length === 0 ?
+          <p>You haven't added any events. Try going to the nearby location page and reserve a spot.</p>:
+          eventStore.reservedEvents.map((val, i) => (
+            <Button key={i} className="text-left my-2 w-100 border-0" id={val.mediaName} onClick={handleShow}>
+              <Row className=" mb-2">
+                <Col>
+                  <div className="float-left">{val.capactiy}</div>
+                </Col>
+                <Col>
+                  <div className="float-right"> 12:00 AM</div>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <h2>{val.venue}</h2>
+                  <p>{val.address}</p>
+                </Col>
+              </Row>
+            </Button>
+          ))
+        }
       </Row>
     </Container>
   );

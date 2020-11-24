@@ -1,9 +1,8 @@
 import './App.css';
 import React, {useState} from 'react';
-import {HashRouter as Router,
+import {BrowserRouter as Router,
   Switch,
-  Route,
-  useHistory
+  Route
 } from 'react-router-dom';
 import {Container, Row} from 'react-bootstrap';
 import Login from './screens/Login.js';
@@ -34,8 +33,6 @@ function App() {
   const [users, setUsers] = useState(initialUsers);
   const [events, setEvents] = useState(initialEvents);
   const [reservedEvents, reserveEvent] = useState([]);
-
-  const history = useHistory();
 
   const addUser = user => {
     setUsers([...users, user])

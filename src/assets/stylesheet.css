@@ -5,49 +5,49 @@
     color: #0D2363;
 }
 #eventPic01 {
-    background-image: url("./eventPic01.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./eventPic01.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     opacity: .8;
 }
 #eventPic02 {
-    background-image: url("./eventPic02.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./eventPic02.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     opacity: .8;
 }
 #eventPic03 {
-    background-image: url("./eventPic03.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./eventPic03.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     opacity: .8;
 }
 #eventPic04 {
-    background-image: url("./eventPic04.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./eventPic04.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     opacity: .8;
 }
 #eventPic05 {
-    background-image: url("./eventPic05.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./eventPic05.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     opacity: .8;
 }
 #eventPic06 {
-    background-image: url("./eventPic06.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./eventPic06.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     opacity: .8;
 }
 #eventPic07 {
-    background-image: url("./eventPic07.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./eventPic07.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     opacity: .8;
 }
 #eventPic08 {
-    background-image: url("./eventPic08.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./eventPic08.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     opacity: .8;

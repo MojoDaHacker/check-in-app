@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {Container, Row, Col, Button, Form} from 'react-bootstrap';
-import {useParams} from 'react-router-dom';
+import {useParams, useHistory} from 'react-router-dom';
 import StoreContext from "../contexts/store.js";
 
 
@@ -10,13 +10,14 @@ export default function Reserve(props) {
   const storeContext = useContext(StoreContext);
   const eventStore = storeContext.eventKit 
   const {id} = useParams();
+  const history = useHistory();
 
   const reserveEvent = e => {
     e.preventDefault()
 
     eventStore.addEvent(eventStore.events[id])
 
-    console.log(eventStore.reservedEvents)
+    history.goBack();
     
   }
 
